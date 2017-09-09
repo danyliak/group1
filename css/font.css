@@ -1,0 +1,16 @@
+@font-face {
+    font-family: HarmoniaSansPro;
+    src: url('../font/HarmoniaSansProCyr-Regular.otf');
+}
+
+@font-face {
+    font-family: HarmoniaSansPro;
+    src: url('../font/HarmoniaSansProCyr-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: HarmoniaSansPro;
+    src: url('../font/HarmoniaSansProCyr-Italic.otf');
+    font-style: italic;
+}
