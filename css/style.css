@@ -2,9 +2,7 @@ body {
     font-family: 'HarmoniaSansPro', sans-serif;
 }
 
-.container{
-    width: 1200px;  
-}
+
 .orange{
     color: #ff5912;
 }
@@ -25,8 +23,7 @@ body {
     font-weight: bold;
 }
 .section-home .home-background .home-text {
-    position: absolute;
-    top: 30%
+    padding-top: 200px;
 }
 .section-home .home-background .home-text .home-first-label{
     color: #3c4751;
@@ -50,8 +47,7 @@ body {
     margin-right: 10px;
 }
 .section-home .home-label .home-figure{
-    position: absolute;
-    top: 40%;
+    padding-top: 250px;
 }
 .section-home .home-label .home-figure>div{
     margin-top: 10px;
@@ -67,3 +63,9 @@ body {
     background-color:#ff5912 ;
 }
 
+/*media*/
+@media (min-width: 1300px) {
+    .container{
+        width: 1200px;
+    }
+}
