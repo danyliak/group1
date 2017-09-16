@@ -8,11 +8,62 @@ body {
 .orange{
     color: #ff5912;
 }
+.dark-blue{
+    color: #34404b;
+}
 
 .section-home .home-background {
     min-height: 650px;
     background: no-repeat center center;
     background-size: cover;
     position: relative;
+
+}
+.section-home .home-background .home-text h1{
+    text-transform:uppercase;
+    font-size: 50px;
+    font-weight: bold;
+}
+.section-home .home-background .home-text {
+    position: absolute;
+    top: 30%
+}
+.section-home .home-background .home-text .home-first-label{
+    color: #3c4751;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.section-home .home-background .home-text .home-second-label{
+  color: #535f6b;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.section-home .home-background .home-text .home-span-group>span{
+    font-size:15px;
+    font-weight: 600;
+}
+.section-home .home-background .home-text .home-span-group>span:last-child{
+    padding-left: 20px;
+}
+.section-home .home-background .home-text .home-span-group i{
+    margin-right: 10px;
+}
+.section-home .home-label .home-figure{
+    position: absolute;
+    top: 40%;
+}
+.section-home .home-label .home-figure>div{
+    margin-top: 10px;
+}
+.section-home .home-label .home-figure .home-white{
+    height: 17px;
+    width: 10px;
+    background-color: white;
+}
+.section-home .home-label .home-figure .home-orange{
+    height: 34px;
+    width: 10px;
+    background-color:#ff5912 ;
 }
 
