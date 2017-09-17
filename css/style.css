@@ -1,5 +1,6 @@
 body {
     font-family: 'HarmoniaSansPro', sans-serif;
+    background-color: #f4f6f8;
 }
 
 
@@ -10,11 +11,14 @@ body {
     color: #34404b;
 }
 
+/*home section*/
 .section-home .home-background {
     min-height: 650px;
     background: no-repeat center center;
     background-size: cover;
     position: relative;
+    display: flex;
+    align-items: center;
 
 }
 .section-home .home-background .home-text h1{
@@ -22,16 +26,14 @@ body {
     font-size: 50px;
     font-weight: bold;
 }
-.section-home .home-background .home-text {
-    padding-top: 200px;
-}
+
 .section-home .home-background .home-text .home-first-label{
     color: #3c4751;
     font-size: 20px;
     font-weight: 600;
 }
 
-.section-home .home-background .home-text .home-second-label{
+.second-label{
   color: #535f6b;
     font-size: 15px;
     margin-bottom: 30px;
@@ -47,7 +49,7 @@ body {
     margin-right: 10px;
 }
 .section-home .home-label .home-figure{
-    padding-top: 250px;
+    padding-top: 50px;
 }
 .section-home .home-label .home-figure>div{
     margin-top: 10px;
@@ -61,6 +63,147 @@ body {
     height: 34px;
     width: 10px;
     background-color:#ff5912 ;
+}
+
+/*arrivals section*/
+.section-arrivals{
+    padding-top: 45px;
+
+}
+.section-arrivals .arrival-wrapper{
+
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.section-arrivals .arrivals-label h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#ff5912;
+}
+.section-arrivals .arrival-wrapper .arrival-item{
+    position: relative;
+    height: 350px;
+    width: 265px;
+    background-color: white;
+    padding: 20px;
+
+}
+.section-arrivals .arrival-wrapper .arrival-item .item-photo{
+    height: 225px;
+    background: no-repeat center center;
+}
+.section-arrivals .arrival-wrapper .arrival-item .item-label{
+    font-weight: bold;
+    padding-top: 15px;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover{
+    height: 350px;
+    width: 265px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 15px;
+    opacity: 0;
+}
+.section-arrivals .arrival-wrapper  .item-hover hr{
+    width: 39%;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover p{
+    padding-top: 10px;
+}
+.section-arrivals  .arrival-item  .item-hover .hover-photo{
+    min-height: 140px;
+    width: 100px;
+    background: no-repeat center center;
+    background-size:cover;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover  .item-color span{
+    border-radius: 50%;
+    padding-left: 15px;
+    margin-right: 5px;
+}
+.section-arrivals  .arrival-item  .item-hover .hover-label{
+    padding-top: 20px;
+    font-weight: bold;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover .item-icons i{
+    padding: 5px 15px 0px 15px;
+}
+
+.section-arrivals .arrival-wrapper .item-hover:hover{
+    opacity: 1;
+}
+
+.section-arrivals .arrival-add{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    margin-top: 45px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.section-arrivals .arrival-add .arrival-dots{
+    background-color:#ff5912 ;
+    border-radius: 50%;
+}
+.section-arrivals .arrival-sale>div{
+    height: 100px;
+    background-color: white;
+}
+.section-arrivals .arrival-sale .sale{
+    display: flex;
+    justify-content: space-between;
+
+}
+.section-arrivals .arrival-sale .square{
+    position: relative;
+}
+.section-arrivals .arrival-sale .square .first-square{
+    background-color: #ff9060;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 20%;
+    margin-left:20px;
+    transform: rotate(45deg);
+}
+.section-arrivals .arrival-sale .square .second-square{
+    background-color: #ff5912;
+    position: absolute;
+    height: 50px;
+    width: 70px;
+    top: 20%;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+.section-arrivals .arrival-sale .square .square-label{
+    color: white;
+    position: absolute;
+    left: 40%;
+    padding-top: 30px;
+}
+.section-arrivals .arrival-sale .adv-area{
+    padding-top: 20px;
+}
+.section-arrivals .arrival-sale .sale .label h2{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.section-arrivals .arrival-sale .sale .price{
+    padding-top: 25px;
+}
+.section-arrivals .arrival-sale .sale .price span{
+    font-weight: bold;
+    font-size: 30px;
 }
 
 /*media*/
