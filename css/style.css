@@ -70,20 +70,20 @@ body {
     padding-top: 45px;
 
 }
-.section-arrivals .arrival-wrapper{
-
-    padding-top: 20px;
+.arrival-wrapper
+{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.section-arrivals .arrivals-label h2{
+.arrivals-label h2{
     text-transform: uppercase;
     font-weight: bold;
     color:#ff5912;
 }
 .section-arrivals .arrival-wrapper .arrival-item{
     position: relative;
+    margin-bottom: 30px;
     height: 350px;
     width: 265px;
     background-color: white;
@@ -109,6 +109,7 @@ body {
     padding: 20px;
     font-size: 15px;
     opacity: 0;
+    transition: opacity .25s ease
 }
 .section-arrivals .arrival-wrapper  .item-hover hr{
     width: 39%;
@@ -121,12 +122,14 @@ body {
     min-height: 140px;
     width: 100px;
     background: no-repeat center center;
-    background-size:cover;
+    background-size: contain;
+    margin: 0 auto;
 
 }
 .section-arrivals .arrival-wrapper  .item-hover  .item-color span{
     border-radius: 50%;
-    padding-left: 15px;
+    padding-left: 12px;
+    padding-right: 10px;
     margin-right: 5px;
 }
 .section-arrivals  .arrival-item  .item-hover .hover-label{
@@ -164,35 +167,58 @@ body {
     justify-content: space-between;
 
 }
-.section-arrivals .arrival-sale .square{
+.square{
     position: relative;
+    text-align: center;
+    display: inline-block;
+
+    padding: 12px;
+    box-sizing: content-box;
+    transform: rotate(-45deg);
+    color: #fff;
 }
-.section-arrivals .arrival-sale .square .first-square{
+.square-inner{
+    transform: rotate(45deg);
+}
+.square div{
+    position: relative;
+    z-index: 2;
+}
+.square:before{
+    content: '';
     background-color: #ff9060;
     position: absolute;
     height: 60px;
     width: 60px;
-    top: 20%;
-    margin-left:20px;
-    transform: rotate(45deg);
+    top: 0;
+    left: 0;
 }
-.section-arrivals .arrival-sale .square .second-square{
+
+.square:after{
+    content: '';
     background-color: #ff5912;
     position: absolute;
     height: 50px;
     width: 70px;
-    top: 20%;
-    margin-left: 10px;
-    transform: rotate(-45deg);
+    top: 5px;
+    left: -5px;
 }
-.section-arrivals .arrival-sale .square .square-label{
-    color: white;
-    position: absolute;
-    left: 40%;
-    padding-top: 30px;
+
+.section-arrivals .arrival-add span {
+    border-radius: 50%;
+    padding: 7px;
+    margin-right: 5px;
+    margin-top: 10px;
+    height: 7px;
 }
+
 .section-arrivals .arrival-sale .adv-area{
     padding-top: 20px;
+    padding-bottom: 30px;
+
+}
+.section-arrivals .arrival-sale .sale{
+    padding-bottom: 30px;
 }
 .section-arrivals .arrival-sale .sale .label h2{
     text-transform: uppercase;
@@ -205,6 +231,76 @@ body {
     font-weight: bold;
     font-size: 30px;
 }
+
+/*section best */
+.section-best {
+    padding-top: 45px;
+}
+.best-item{
+    background-color: white;
+    height: 160px;
+    width: 370px;
+    padding: 25px;
+    position: relative;
+}
+.best-item .best-photo{
+    display: inline-block;
+    height: 100px;
+    width: 90px;
+    background-size: contain;
+    background: no-repeat center center;
+    margin-left: 15px;
+}
+.best-item .best-label{
+    display: inline-block;
+    margin-left: 25px;
+    position: relative;
+}
+.best-item .hover-best{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .25s ease
+}
+.best-item .hover-best:hover{
+    opacity: 1;
+}
+/*stars*/
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: red;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: red;  }
 
 /*media*/
 @media (min-width: 1300px) {
