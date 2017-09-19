@@ -9,6 +9,58 @@ body {
 .dark-blue{
     color: #34404b;
 }
+/*header*/
+.header-small {
+    font-size: 12px;
+}
+.header-small span {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.header-small .social-img i {
+    /*padding-left: 8px;*/
+    /*padding-right: 8px;*/
+    padding: 0 0 0 16px;
+}
+.header-big .shopy-navbar {
+    height: 120px;
+    margin-bottom: 0;
+    background-color: white;
+}
+.header-big .navbar-brand {
+    padding-top: 41px;
+}
+.header-big .shopy-navbar .shopy-navbar-collapse {
+    padding-top: 35px;
+    float: left;
+}
+.header-big .shopy-navbar .navbar-header button {
+    margin-top: 41px;
+}
+.header-big .shopy-navbar .shopy-navbar-collapse {
+    border-color: transparent;
+}
+.shopy-navbar-collapse .navbar-nav li {
+    z-index: 9;
+}
+.shopy-navbar-collapse .navbar-nav>.active>a, .shopy-navbar-collapse .navbar-nav>.active>a:focus, .shopy-navbar-collapse .navbar-nav>.active>a:hover {
+    color: #ff5912;
+    background-color: transparent;
+    border-bottom: 1px solid #ff5912;
+    border-top: 1px solid #ff5912;
+}
+.header-big .shopy-navbar .header-big-right {
+    padding-top: 50px;
+}
+.header-big .shopy-navbar .header-big-right>div {
+    display: inline-block;
+    padding: 0 0 0 30px;
+}
+.header-big-right .fa-shopping-basket {
+    color: #ff5912;
+}
+
+/*header*/
 
 .section-home .home-background {
     min-height: 650px;
@@ -67,5 +119,38 @@ body {
 @media (min-width: 1300px) {
     .container{
         width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header-small-contact {
+        text-align: center;
+    }
+    .header-big .shopy-navbar .shopy-navbar-collapse {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .shopy-navbar-collapse .navbar-nav>li>a {
+        font-size: 10px;
+    }
+    .header-big-right {
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 769px) {
+    .shopy-navbar-collapse .navbar-nav>li>a {
+        font-size: 12px;
+    }
+    .header-big-right {
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 993px) {
+    .shopy-navbar-collapse .navbar-nav>li>a {
+        font-size: 16px;
+    }
+    .header-big-right {
+        font-size: 16px;
     }
 }
