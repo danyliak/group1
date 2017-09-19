@@ -1,5 +1,6 @@
 body {
     font-family: 'HarmoniaSansPro', sans-serif;
+    background-color: #f4f6f8;
 }
 
 
@@ -62,11 +63,14 @@ body {
 
 /*header*/
 
+/*home section*/
 .section-home .home-background {
     min-height: 650px;
     background: no-repeat center center;
     background-size: cover;
     position: relative;
+    display: flex;
+    align-items: center;
 
 }
 .section-home .home-background .home-text h1{
@@ -74,16 +78,14 @@ body {
     font-size: 50px;
     font-weight: bold;
 }
-.section-home .home-background .home-text {
-    padding-top: 200px;
-}
+
 .section-home .home-background .home-text .home-first-label{
     color: #3c4751;
     font-size: 20px;
     font-weight: 600;
 }
 
-.section-home .home-background .home-text .home-second-label{
+.second-label{
   color: #535f6b;
     font-size: 15px;
     margin-bottom: 30px;
@@ -99,7 +101,7 @@ body {
     margin-right: 10px;
 }
 .section-home .home-label .home-figure{
-    padding-top: 250px;
+    padding-top: 50px;
 }
 .section-home .home-label .home-figure>div{
     margin-top: 10px;
@@ -115,12 +117,334 @@ body {
     background-color:#ff5912 ;
 }
 
+/*arrivals section*/
+.section-arrivals{
+    padding-top: 45px;
+
+}
+.arrival-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.arrivals-label h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#ff5912;
+}
+.section-arrivals .arrival-wrapper .arrival-item{
+    position: relative;
+    margin-bottom: 30px;
+    height: 350px;
+    width: 265px;
+    background-color: white;
+    padding: 20px;
+
+}
+.section-arrivals .arrival-wrapper .arrival-item .item-photo{
+    height: 225px;
+    background: no-repeat center center;
+}
+.section-arrivals .arrival-wrapper .arrival-item .item-label{
+    font-weight: bold;
+    padding-top: 15px;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover{
+    height: 350px;
+    width: 265px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity .25s ease
+}
+.section-arrivals .arrival-wrapper  .item-hover hr{
+    width: 39%;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover p{
+    padding-top: 10px;
+}
+.section-arrivals  .arrival-item  .item-hover .hover-photo{
+    min-height: 140px;
+    width: 100px;
+    background: no-repeat center center;
+    background-size: contain;
+    margin: 0 auto;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover  .item-color span{
+    border-radius: 50%;
+    padding-left: 12px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+.section-arrivals  .arrival-item  .item-hover .hover-label{
+    padding-top: 20px;
+    font-weight: bold;
+
+}
+.section-arrivals .arrival-wrapper  .item-hover .item-icons i{
+    padding: 5px 15px 0px 15px;
+}
+
+.section-arrivals .arrival-wrapper .item-hover:hover{
+    opacity: 1;
+}
+
+.section-arrivals .arrival-add{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    margin-top: 45px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.section-arrivals .arrival-add .arrival-dots{
+    background-color:#ff5912 ;
+    border-radius: 50%;
+}
+.section-arrivals .arrival-sale>div{
+    height: 100px;
+    background-color: white;
+}
+.section-arrivals .arrival-sale .sale{
+    display: flex;
+    justify-content: space-between;
+
+}
+.square{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+
+    padding: 12px;
+    box-sizing: content-box;
+    transform: rotate(-45deg);
+    color: #fff;
+}
+.square-inner{
+    transform: rotate(45deg);
+}
+.square div{
+    position: relative;
+    z-index: 2;
+}
+.square:before{
+    content: '';
+    background-color: #ff9060;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 0;
+    left: 0;
+}
+
+.square:after{
+    content: '';
+    background-color: #ff5912;
+    position: absolute;
+    height: 50px;
+    width: 70px;
+    top: 5px;
+    left: -5px;
+}
+
+.section-arrivals .arrival-add span {
+    border-radius: 50%;
+    padding: 7px;
+    margin-right: 5px;
+    margin-top: 10px;
+    height: 7px;
+}
+
+.section-arrivals .arrival-sale .adv-area{
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+}
+.section-arrivals .arrival-sale .sale{
+    padding-bottom: 30px;
+}
+.section-arrivals .arrival-sale .sale .label h2{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.section-arrivals .arrival-sale .sale .price{
+    padding-top: 25px;
+}
+.section-arrivals .arrival-sale .sale .price span{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/*section best */
+.section-best {
+    padding-top: 45px;
+}
+.best-item{
+    background-color: white;
+    height: 160px;
+    width: 370px;
+    padding: 25px;
+    position: relative;
+}
+.best-item .best-photo{
+    display: inline-block;
+    height: 100px;
+    width: 90px;
+    background-size: contain;
+    background: no-repeat center center;
+    margin-left: 15px;
+}
+.best-item .best-label{
+    display: inline-block;
+    margin-left: 25px;
+    position: relative;
+}
+.best-item .hover-best{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .25s ease
+}
+.best-item .hover-best:hover{
+    opacity: 1;
+}
+/*stars*/
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: red;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: red;  }
+
+
+/*news letter*/
+.news-letter{
+  background-color: white;
+  padding: 50px;
+  margin: 100px 0;
+}
+.news-letter span{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.news-letter p{
+  margin: 0;
+  font-style: italic;
+  display: inline-block;
+}
+.news-right{
+  float: right;
+  display: inline-block;
+}
+.news-letter-group input{
+  margin-left: 10px;
+  border: none;
+  color: #7c8791;
+  font-style: italic;
+}
+.news-letter-group input:focus,
+.news-letter-group input:visited{
+  border: none;
+  outline: none;
+}
+.news-right a{
+  text-decoration: none;
+  color: white;
+  background-color: #ff5912;
+  padding: 15px 20px;
+  float: right;
+  margin-top: -15px;
+}
+/*footer style*/
+.footer{
+  background-color: white;
+  padding: 40px 0 10px 0;
+}
+.footer-logo img{
+  height: 50px;
+  margin-bottom: 5px;
+}
+.footer ul{
+  display: inline-block;
+}
+.footer ul a{
+  color: #34404b;
+  text-decoration: none;
+}
+.footer ul a li{
+  margin-bottom: 10px;
+}
+.footer ul a:hover{
+  color: #ff5912;
+}
+/*need to cut images*/
+.footer-payment{
+  overflow: hidden;
+}
+.footer-payment h2{
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* didn't work
+@media only screen and (max-width : 660px){
+  .footer-logo{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .footer{
+    background-color: black;
+  }
+}*/
+
+
 /*media*/
 @media (min-width: 1300px) {
     .container{
         width: 1200px;
     }
 }
+
 
 @media only screen and (max-width: 767px) {
     .header-small-contact {
