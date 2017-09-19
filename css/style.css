@@ -302,9 +302,93 @@ body {
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: red;  }
 
+
+/*news letter*/
+.news-letter{
+  background-color: white;
+  padding: 50px;
+  margin: 100px 0;
+}
+.news-letter span{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.news-letter p{
+  margin: 0;
+  font-style: italic;
+  display: inline-block;
+}
+.news-right{
+  float: right;
+  display: inline-block;
+}
+.news-letter-group input{
+  margin-left: 10px;
+  border: none;
+  color: #7c8791;
+  font-style: italic;
+}
+.news-letter-group input:focus,
+.news-letter-group input:visited{
+  border: none;
+  outline: none;
+}
+.news-right a{
+  text-decoration: none;
+  color: white;
+  background-color: #ff5912;
+  padding: 15px 20px;
+  float: right;
+  margin-top: -15px;
+}
+/*footer style*/
+.footer{
+  background-color: white;
+  padding: 40px 0 10px 0;
+}
+.footer-logo img{
+  height: 50px;
+  margin-bottom: 5px;
+}
+.footer ul{
+  display: inline-block;
+}
+.footer ul a{
+  color: #34404b;
+  text-decoration: none;
+}
+.footer ul a li{
+  margin-bottom: 10px;
+}
+.footer ul a:hover{
+  color: #ff5912;
+}
+/*need to cut images*/
+.footer-payment{
+  overflow: hidden;
+}
+.footer-payment h2{
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
 /*media*/
 @media (min-width: 1300px) {
     .container{
         width: 1200px;
     }
 }
+/* didn't work
+@media only screen and (max-width : 660px){
+  .footer-logo{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .footer{
+    background-color: black;
+  }
+}*/
