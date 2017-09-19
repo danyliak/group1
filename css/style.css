@@ -242,6 +242,7 @@ body {
     width: 370px;
     padding: 25px;
     position: relative;
+    margin-bottom: 30px;
 }
 .best-item .best-photo{
     display: inline-block;
@@ -250,11 +251,16 @@ body {
     background-size: contain;
     background: no-repeat center center;
     margin-left: 15px;
+    float: left;
 }
 .best-item .best-label{
     display: inline-block;
     margin-left: 25px;
     position: relative;
+    padding-top: 20px;
+}
+.best-label .rating{
+    float: left;
 }
 .best-item .hover-best{
     position: absolute;
@@ -380,6 +386,12 @@ body {
 @media (min-width: 1300px) {
     .container{
         width: 1200px;
+    }
+}
+
+@media (max-width:576px){
+    .sale h2{
+        font-size: 20px;
     }
 }
 /* didn't work
