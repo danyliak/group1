@@ -21,7 +21,102 @@
 </head>
 <body>
     <div id="header"></div>
+
     <main>
+
+
+<div class="products container">
+  <div class="col-xs-3">
+    <div class="categories products-menu">
+      <h3 class="orange">Categories</h3>
+      <ul>
+        <li>
+          <a href="">Man</a>
+        </li>
+        <li>
+          <a href="">Women</a>
+        </li>
+        <li>
+          <a href="">Childrens</a>
+        </li>
+        <li>
+          <a href="">Hot Deals</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="prices products-menu">
+      <h3 class="orange">Price Filtter</h3>
+
+      <div id="slider"></div>
+      <input type="text" id="minCost" value="0"/>
+      <input type="text" id="maxCost" value="1000"/>
+
+    </div>
+
+    <div class="sizes products-menu">
+      <h3 class="orange">Sizes</h3>
+      <ul>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="s" name="cc" />
+          <label for="s">Small</label>
+        </li>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="m" name="cc" />
+          <label for="m">Midum</label>
+        </li>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="l" name="cc" />
+          <label for="l">Larg</label>
+        </li>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="xl" name="cc" />
+          <label for="xl">X Larg</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="brands products-menu">
+      <h3 class="orange">Brands</h3>
+      <ul>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="reebok" name="cc" />
+          <label for="reebok">Reebok</label>
+        </li>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="addidas" name="cc" />
+          <label for="addidas">Addidas</label>
+        </li>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="nike" name="cc" />
+          <label for="nike">Nike</label>
+        </li>
+        <li>
+          <input class="products-checkbox" type="checkbox" id="active" name="cc" />
+          <label for="active">Active</label>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<section class="container">
+  <div class="news-letter">
+    <span class="orange">news letter</span>
+    <p>join us now to get all news and special offers</p>
+  <div class="news-right">
+    <span class="news-letter-group">
+      <i class="fa fa-envelope-o orange" aria-hidden="true"></i>
+      <input type="email" placeholder="type your email here">
+    </span>
+    <a href="">join us</a>
+  </div>
+  </div>
+</section>
 
 
 
@@ -30,8 +125,58 @@
 
 
 
+
     <script src="libs/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="libs/jquery.ui-slider.js"></script>
     <script src="libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+
+    <script type="text/javascript">
+    jQuery("#slider").slider({
+        min: 0,
+        max: 1000,
+        values: [0,1000],
+        range: true,
+        // stop: function(event, ui) {
+        // // jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
+        // // jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
+        // },
+        // slide: function(event, ui){
+        //   debugger;
+        // jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
+        // jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
+        // }
+        });
+
+        jQuery("#slider").slider("values",0, 100, 200);
+
+
+        // jQuery("input#minCost").change(function(){
+        // var value1=jQuery("input#minCost").val();
+        // var value2=jQuery("input#maxCost").val();
+        //
+        // if(parseInt(value1) > parseInt(value2)){
+        // value1 = value2;
+        // jQuery("input#minCost").val(value1);
+        // }
+        // jQuery("#slider").slider("values",0,value1);
+        // });
+        //
+        //
+        // jQuery("input#maxCost").change(function(){
+        // var value1=jQuery("input#minCost").val();
+        // var value2=jQuery("input#maxCost").val();
+        //
+        // if (value2 > 1000) { value2 = 1000; jQuery("input#maxCost").val(1000)}
+        //
+        // if(parseInt(value1) > parseInt(value2)){
+        // value2 = value1;
+        // jQuery("input#maxCost").val(value2);
+        // }
+        // jQuery("#slider").slider("values",1,value2);
+        // });
+
+    </script>
 </body>
 </html>

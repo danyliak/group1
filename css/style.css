@@ -432,6 +432,141 @@ body {
   font-weight: bold;
 }
 
+.products{
+  margin-top: 100px;
+}
+
+.products-menu{
+  padding: 10px 35px;
+  background-color: white;
+  margin-bottom: 25px;
+}
+.products-menu h3{
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.products-menu ul{
+  font-weight: bold;
+  padding: 0;
+  list-style-type: none;
+}
+.products-menu ul li{
+  margin-bottom: 20px;
+}
+.products-menu ul li a{
+  color: #34404b;
+}
+
+/* Ширина слайдера */
+#slider {
+	width: 100%;
+  margin-bottom: 10px;
+}
+/* Контейнер слайдера */
+.ui-slider {
+	position: relative;
+}
+/* Ползунок */
+.ui-slider .ui-slider-handle {
+	position: absolute;
+  top: 3px;
+	z-index: 2;
+	width: 5px;   /* Задаем нужную ширину */
+	height: 5px;  /* и высоту */
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+	/*background: url(../img/slider.png) no-repeat; /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */*/
+	cursor: pointer
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	overflow: hidden;
+}
+/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+.ui-slider-horizontal {
+	 height: 3px; /* задаем высоту согласно дизайна */
+}
+/* позиционируем ползунки */
+.ui-slider-horizontal .ui-slider-handle {
+	top: -2px;
+	margin-left: -6px;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+/* оформление полосы по которой ходит ползунок */
+.ui-widget-content {
+	border: 1px solid #D4D4D4;
+	background: #fff;
+}
+/* оформление активного участка (между двумя ползунками) */
+.ui-widget-header {
+	border: 1px solid #D4D4D4;
+	background: #f00;
+}
+/* скругление для полосы слайдера */
+.ui-corner-all {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/*.sizes input[type="checkbox"]:checked{
+  border: 2px solid orange;
+}*/
+
+
+
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.products-checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.products-checkbox + label {
+  cursor: pointer;
+}
+/* Прячем оригинальный чекбокс. */
+.products-checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.products-checkbox:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding:  0 0 0 30px;/* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.products-checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: #edf0f2;
+}
+/* Меняем фон чекбокса, когда он включен. */
+.products-checkbox:checked + label:before {
+  border: 5px solid #ff5912;
+  background-color: white;
+}
+
+
+
 
 @media (max-width:576px){
     .sale h2{
