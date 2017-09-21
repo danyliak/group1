@@ -456,7 +456,10 @@ body {
 .products-menu ul li a{
   color: #34404b;
 }
-
+.products-menu ul li a:hover{
+  text-decoration: none;
+  color: #ff5912;
+}
 /* Ширина слайдера */
 #slider {
 	width: 100%;
@@ -471,10 +474,9 @@ body {
 	position: absolute;
   top: 3px;
 	z-index: 2;
-	width: 5px;   /* Задаем нужную ширину */
-	height: 5px;  /* и высоту */
-  background-color: black;
-  border: 1px solid black;
+	width: 9px;   /* Задаем нужную ширину */
+	height: 9px;  /* и высоту */
+  background-color: #34404b;
   border-radius: 50%;
 	/*background: url(../img/slider.png) no-repeat; /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */*/
 	cursor: pointer
@@ -487,18 +489,21 @@ body {
 	border: 0;
 	overflow: hidden;
 }
+.ui-slider-range{
+	border: 1px solid #D4D4D4;
+}
 /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
 .ui-slider-horizontal {
-	 height: 3px; /* задаем высоту согласно дизайна */
+	 height: 5px; /* задаем высоту согласно дизайна */
 }
 /* позиционируем ползунки */
 .ui-slider-horizontal .ui-slider-handle {
-	top: -2px;
-	margin-left: -6px;
+	top: -3px;
+	margin-left: -2px;
 }
 .ui-slider-horizontal .ui-slider-range {
 	top: 0;
-	height: 100%;
+	height: calc(100% + 1px);
 }
 .ui-slider-horizontal .ui-slider-range-min {
 	left: 0;
@@ -506,15 +511,19 @@ body {
 .ui-slider-horizontal .ui-slider-range-max {
 	right: 0;
 }
+/*delete blue outline*/
+.ui-slider-handle{
+  outline: none;
+}
 /* оформление полосы по которой ходит ползунок */
 .ui-widget-content {
-	border: 1px solid #D4D4D4;
-	background: #fff;
+	border: 1px solid transparent;
+	background: #edf0f2;
 }
 /* оформление активного участка (между двумя ползунками) */
 .ui-widget-header {
-	border: 1px solid #D4D4D4;
-	background: #f00;
+
+	background: #34404b;
 }
 /* скругление для полосы слайдера */
 .ui-corner-all {
