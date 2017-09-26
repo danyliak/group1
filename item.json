@@ -74,6 +74,34 @@
     "price": 100,
     "photo": "img/item3.png"
 
+  },
+  {
+    "id": 4,
+    "name": "Rebock Track Jacket",
+    "price": 100,
+    "photo": "img/item1.png"
+
+  },
+  {
+    "id": 4,
+    "name": "Rebock Track Jacket",
+    "price": 100,
+    "photo": "img/item3.png"
+
+  },
+  {
+    "id": 4,
+    "name": "Rebock Track Jacket",
+    "price": 100,
+    "photo": "img/item2.png"
+
+  },
+  {
+    "id": 4,
+    "name": "Rebock Track Jacket",
+    "price": 100,
+    "photo": "img/item3.png"
+
   }
 
 ]

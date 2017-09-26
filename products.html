@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -101,8 +98,21 @@
     </div>
 
     </div>
+  <div class="col-xs-9 arrival-wrapper">
+    <div class="arrival-wrapper gal" id="gallery">
+
+
+    </div>
+    <div class="arrival-add ">
+      <span class="arrival-dots " style="background-color:  #ff5912;"></span>
+      <span class="arrival-dots " style="background-color:  #ff5912;"></span>
+      <span class="arrival-dots " style="background-color: #ff5912;"></span>
+
+    </div>
   </div>
-</div>
+  <div></div>
+  </div>
+
 
 
 
@@ -126,7 +136,30 @@
     <div id="footer"></div>
 
 
+    <script id="productTempalte" type="text/x-handlebars-template">
+      <div class="arrival-item" >
+        <div class="item-photo"></div>
+        <div class="item-label text-center">
+          <p class="dark-blue"></p>
+          <p class="orange"></p>
+        </div>
+        <div class="item-hover text-center">
+          <div class="hover-photo" ></div>
+          <div class="hover-label orange"></div>
+          <p>sizes : s-m-l-xl</p>
+          <div class="item-color">
+            <span style="background-color: #c7254e"></span>
+            <span style="background-color: #449d44"></span>
+            <span style="background-color: #2aabd2"></span>
+            <span style="background-color: #be00ff;"></span></div>
+          <hr>
 
+          <div class="item-icons"><i class="fa fa-globe dark-blue" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart orange" aria-hidden="true"></i>
+            <i class="fa fa-heart-o dark-blue" aria-hidden="true"></i>
+          </div>
+        </div></div>
+    </script>
 
     <script src="libs/jquery/jquery-3.2.1.min.js"></script>
 <!-- <script type="text/javascript" src="libs/jquery.ui-slider.js"></script> -->
@@ -173,6 +206,53 @@
         }
 
 
+    });
+
+
+    var counterFromg = 0;
+    var counterTogal = 9;
+    var countStep = 3;
+
+    function drawProductsgal (from, to) {
+        $.ajax({
+            url: "item.json",
+            contentType: "application/json; charset=utf-8",
+            dataType: "text"
+        }).done(function(products) {
+            products = JSON.parse(products);
+            var productLength = $(products).length;
+
+
+            var productsSliced = products.slice(from, to);
+
+            productsSliced.forEach(function(product) {
+
+                var productTemplate = $("#productTempalte");
+                var template = $(productTemplate.html());
+
+                template.find("div.item-photo").css('backgroundImage', "url(" + product.photo + ")");
+                template.find("div.hover-photo").css('backgroundImage', "url(" + product.photo + ")");
+                template.find("p.dark-blue").text(product['name']);
+                template.find("p.orange").text(product['price']+"$");
+
+                $('<div></div>').append(template).appendTo("#gallery");
+            });
+
+            counterFromg = counterFromg + countStep;
+            counterTogal = counterTogal + countStep;
+
+
+
+
+        }).fail(function(e) {
+            console.error(e);
+        });
+    }
+
+
+    drawProductsgal(counterFromg, counterTogal);
+    $('.arrival-add').on('click', function () {
+        drawProductsgal (counterFromg, counterTogal);
     });
 
     </script>

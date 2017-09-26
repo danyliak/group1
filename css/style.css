@@ -90,11 +90,11 @@ body {
     font-size: 15px;
     margin-bottom: 30px;
 }
-.section-home .home-background .home-text .home-span-group>span{
+.home-text .home-span-group>span{
     font-size:15px;
     font-weight: 600;
 }
-.section-home .home-background .home-text .home-span-group>span:last-child{
+.home-text .home-span-group>span:last-child{
     padding-left: 20px;
 }
 .section-home .home-background .home-text .home-span-group i{
@@ -133,7 +133,7 @@ body {
     font-weight: bold;
     color:#ff5912;
 }
-.section-arrivals .arrival-wrapper .arrival-item{
+.arrival-wrapper .arrival-item{
     position: relative;
     margin-bottom: 30px;
     height: 350px;
@@ -142,16 +142,16 @@ body {
     padding: 20px;
 
 }
-.section-arrivals .arrival-wrapper .arrival-item .item-photo{
+ .arrival-wrapper .arrival-item .item-photo{
     height: 225px;
     background: no-repeat center center;
 }
-.section-arrivals .arrival-wrapper .arrival-item .item-label{
+.arrival-wrapper .arrival-item .item-label{
     font-weight: bold;
     padding-top: 15px;
 
 }
-.section-arrivals .arrival-wrapper  .item-hover{
+ .arrival-wrapper  .item-hover{
     height: 350px;
     width: 265px;
     background-color: white;
@@ -163,14 +163,14 @@ body {
     opacity: 0;
     transition: opacity .25s ease
 }
-.section-arrivals .arrival-wrapper  .item-hover hr{
+ .arrival-wrapper  .item-hover hr{
     width: 39%;
 
 }
-.section-arrivals .arrival-wrapper  .item-hover p{
+ .arrival-wrapper  .item-hover p{
     padding-top: 10px;
 }
-.section-arrivals  .arrival-item  .item-hover .hover-photo{
+  .arrival-item  .item-hover .hover-photo{
     min-height: 140px;
     width: 100px;
     background: no-repeat center center;
@@ -178,26 +178,26 @@ body {
     margin: 0 auto;
 
 }
-.section-arrivals .arrival-wrapper  .item-hover  .item-color span{
+ .arrival-wrapper  .item-hover  .item-color span{
     border-radius: 50%;
     padding-left: 12px;
     padding-right: 10px;
     margin-right: 5px;
 }
-.section-arrivals  .arrival-item  .item-hover .hover-label{
+ .arrival-item  .item-hover .hover-label{
     padding-top: 20px;
     font-weight: bold;
 
 }
-.section-arrivals .arrival-wrapper  .item-hover .item-icons i{
+ .arrival-wrapper  .item-hover .item-icons i{
     padding: 5px 15px 0px 15px;
 }
 
-.section-arrivals .arrival-wrapper .item-hover:hover{
+ .arrival-wrapper .item-hover:hover{
     opacity: 1;
 }
 
-.section-arrivals .arrival-add{
+ .arrival-add{
     display: flex;
     background-color: white;
     width: 100%;
@@ -206,7 +206,7 @@ body {
     justify-content: center;
     margin-bottom: 40px;
 }
-.section-arrivals .arrival-add .arrival-dots{
+ .arrival-dots{
     background-color:#ff5912 ;
     border-radius: 50%;
 }
@@ -479,7 +479,7 @@ body {
   background-color: #34404b;
   border-radius: 50%;
 	/*background: url(../img/slider.png) no-repeat; /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */*/
-	cursor: pointer
+	cursor: pointer;
 }
 .ui-slider .ui-slider-range {
 	position: absolute;

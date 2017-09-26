@@ -26,7 +26,7 @@ $(function(){
                 var template = $(productTemplate.html());
 
                 template.find("div.item-photo").css('backgroundImage', "url(" + product.photo + ")");
-                template.find("div.hover-photo").css('backgroundImage', "url('img/item1.png')");
+                template.find("div.hover-photo").css('backgroundImage', "url(" + product.photo + ")");
                 template.find("p.dark-blue").text(product['name']);
                 template.find("p.orange").text(product['price']+"$");
 
@@ -53,7 +53,7 @@ $(function(){
 
     $('.arrival-add').on('click', function () {
         drawProducts(counterFrom, counterTo);
-    })
+    });
 
 
 
